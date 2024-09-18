@@ -70,8 +70,8 @@ class _LoginScreenState extends State<LoginScreen> with StreamSubscriber {
   String standardizeHost(String host) {
     host = host.trim().replaceAll(RegExp(r'/+$'), '');
 
-    if (!host.startsWith("http://") && !host.startsWith("https://")) {
-      host = "https://" + host;
+    if (!host.startsWith('http://') && !host.startsWith('https://')) {
+      host = 'https://' + host;
     }
 
     return host;

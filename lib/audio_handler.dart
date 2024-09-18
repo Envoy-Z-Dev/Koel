@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'dart:io';
 
 import 'package:app/app_state.dart';
@@ -20,7 +19,6 @@ class KoelAudioHandler extends BaseAudioHandler with QueueHandler, SeekHandler {
   late final PlayableProvider playableProvider;
   late AudioServiceRepeatMode repeatMode;
 
-  var _errorCount = 0;
   var _initialized = false;
   var _currentMediaItem = MediaItem(id: '', title: '');
 
@@ -260,10 +258,7 @@ class KoelAudioHandler extends BaseAudioHandler with QueueHandler, SeekHandler {
       });
 
       // Reset the error count if the song is successfully loaded.
-      _errorCount = 0;
-    } catch (e) {
-      _errorCount++;
-    }
+    } catch (e) {}
   }
 
   @override

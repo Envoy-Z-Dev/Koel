@@ -74,7 +74,7 @@ class Album {
       ..artistId = remote.artistId
       ..cover = remote.cover
       ..name = remote.name
-      ..playCount = remote.playCount ?? 0;
+      ..playCount = remote.playCount;
 
     _image = null;
 
