@@ -7,39 +7,13 @@ import 'package:provider/provider.dart';
 
 enum ProfileAvatarMenuItems {
   clearDownloads,
-  logout,
 }
 
 class ProfileAvatar extends StatelessWidget {
   const ProfileAvatar({Key? key}) : super(key: key);
 
-  void logout(BuildContext context) {
-    showCupertinoDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return CupertinoAlertDialog(
-          title: const Text('Log out?'),
-          actions: <Widget>[
-            CupertinoDialogAction(
-              child: const Text('Cancel'),
-              onPressed: () => Navigator.pop(context),
-            ),
-            CupertinoDialogAction(
-              child: const Text('Confirm'),
-              isDestructiveAction: true,
-              onPressed: () async {
-                await context.read<AuthProvider>().logout();
-                await audioHandler.cleanUpUponLogout();
-                Navigator.of(
-                  context,
-                  rootNavigator: true,
-                ).pushNamedAndRemoveUntil(LoginScreen.routeName, (_) => false);
-              },
-            ),
-          ],
-        );
-      },
-    );
+  void clearDownloads(BuildContext context) {
+    context.read<DownloadProvider>().clear();
   }
 
   @override
@@ -50,10 +24,7 @@ class ProfileAvatar extends StatelessWidget {
       onSelected: (item) {
         switch (item) {
           case ProfileAvatarMenuItems.clearDownloads:
-            downloads.clear();
-            break;
-          case ProfileAvatarMenuItems.logout:
-            logout(context);
+            clearDownloads(context);
             break;
         }
       },
@@ -63,11 +34,6 @@ class ProfileAvatar extends StatelessWidget {
         const PopupMenuItem(
           value: ProfileAvatarMenuItems.clearDownloads,
           child: Text('Clear downloads'),
-        ),
-        const PopupMenuDivider(height: .5),
-        const PopupMenuItem(
-          value: ProfileAvatarMenuItems.logout,
-          child: Text('Log out'),
         ),
       ],
     );
