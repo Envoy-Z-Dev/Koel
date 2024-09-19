@@ -1,6 +1,4 @@
-import 'package:app/providers/providers.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class OopsBox extends StatelessWidget {
   static Key retryButtonKey = UniqueKey();

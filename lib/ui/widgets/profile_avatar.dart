@@ -1,6 +1,4 @@
-import 'package:app/main.dart';
 import 'package:app/providers/providers.dart';
-import 'package:app/ui/screens/screens.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -18,7 +16,7 @@ class ProfileAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final downloads = context.read<DownloadProvider>();
+    context.read<DownloadProvider>();
 
     return PopupMenuButton<ProfileAvatarMenuItems>(
       onSelected: (item) {

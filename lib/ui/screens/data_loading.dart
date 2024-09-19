@@ -38,7 +38,6 @@ class _DataLoadingScreen extends State<DataLoadingScreen> {
       body: GradientDecoratedContainer(
         child: _hasError
             ? OopsBox(
-                showLogOutButton: true,
                 onRetry: () {
                   setState(() => _hasError = false);
                   _loadData();
