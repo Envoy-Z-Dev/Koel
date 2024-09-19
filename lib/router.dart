@@ -7,7 +7,6 @@ class AppRouter {
   const AppRouter();
 
   static Map<String, Widget Function(BuildContext)> routes = {
-    InitialScreen.routeName: (_) => const InitialScreen(),
     MainScreen.routeName: (_) => const MainScreen(),
     HomeScreen.routeName: (_) => const HomeScreen(),
     SearchScreen.routeName: (_) => const SearchScreen(),

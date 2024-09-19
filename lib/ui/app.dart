@@ -1,6 +1,5 @@
 import 'package:app/constants/constants.dart';
 import 'package:app/router.dart';
-import 'package:app/ui/screens/screens.dart';
 import 'package:app/ui/theme_data.dart';
 import 'package:app/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +19,6 @@ class App extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: AppStrings.appName,
           theme: themeData(context),
-          initialRoute: InitialScreen.routeName,
           routes: AppRouter.routes,
         ),
       ),
