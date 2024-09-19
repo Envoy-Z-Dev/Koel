@@ -57,7 +57,7 @@ class Artist {
   Artist merge(Artist remote) {
     this
       ..imageUrl = remote.imageUrl
-      ..playCount = remote.playCount ?? 0
+      ..playCount = remote.playCount
       ..name = remote.name;
 
     _image = null;

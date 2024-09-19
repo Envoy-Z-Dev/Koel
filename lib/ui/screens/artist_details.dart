@@ -102,7 +102,7 @@ class _ArtistDetailsScreenState extends State<ArtistDetailsScreen> {
                         ),
                       ),
                       coverImage: Hero(
-                        tag: "artist-hero-${artist.id}",
+                        tag: 'artist-hero-${artist.id}',
                         child: DecoratedBox(
                           decoration: BoxDecoration(
                             image: DecorationImage(

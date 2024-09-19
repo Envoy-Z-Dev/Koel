@@ -103,7 +103,7 @@ class _PodcastDetailsScreen extends State<PodcastDetailsScreen> {
                         ),
                       ),
                       coverImage: Hero(
-                        tag: "podcast-hero-${podcast.id}",
+                        tag: 'podcast-hero-${podcast.id}',
                         child: DecoratedBox(
                           decoration: BoxDecoration(
                             image: DecorationImage(

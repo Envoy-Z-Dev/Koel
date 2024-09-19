@@ -99,7 +99,7 @@ class _AlbumDetailsScreenState extends State<AlbumDetailsScreen> {
                         ),
                       ),
                       coverImage: Hero(
-                        tag: "album-hero-${album.id}",
+                        tag: 'album-hero-${album.id}',
                         child: DecoratedBox(
                           decoration: BoxDecoration(
                             image: DecorationImage(
