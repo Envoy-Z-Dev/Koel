@@ -197,9 +197,6 @@ class _ConnectivityInfoBoxState extends State<ConnectivityInfoBox>
                   ),
                   onPressed: () {
                     AppState.delete('mode');
-                    Navigator.of(context).pushReplacementNamed(
-                      InitialScreen.routeName,
-                    );
                   },
                   icon: const Icon(
                     CupertinoIcons.wifi,
