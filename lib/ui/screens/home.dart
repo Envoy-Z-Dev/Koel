@@ -39,8 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
     try {
       await context.read<OverviewProvider>().refresh();
-    } catch (_) {
+    } catch (exception, stackTrace) {
       setState(() => _errored = true);
+      print(exception);
+      debugPrintStack(stackTrace: stackTrace);
     } finally {
       setState(() => _loading = false);
     }
