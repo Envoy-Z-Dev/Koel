@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 class AppRouter {
   const AppRouter();
 
+  static final initialRoute = MainScreen.routeName;
+
   static Map<String, Widget Function(BuildContext)> routes = {
     MainScreen.routeName: (_) => const MainScreen(),
     HomeScreen.routeName: (_) => const HomeScreen(),
