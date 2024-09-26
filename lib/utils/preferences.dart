@@ -1,3 +1,4 @@
+import 'package:app/constants/strings.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:get_storage/get_storage.dart';
 
@@ -11,7 +12,7 @@ void _delete(String key) => storage.remove(key);
 
 set host(String? url) => _set('hostUrl', url);
 
-String? get host => _get<String>('hostUrl');
+String? get host => _get<String>('hostUrl') ?? AppStrings.defaultApi;
 
 String? get apiBaseUrl => host == null ? null : '$host/api';
 
