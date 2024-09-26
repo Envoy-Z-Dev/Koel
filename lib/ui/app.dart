@@ -12,15 +12,12 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
-    return Material(
-      color: Colors.transparent,
-      child: GradientDecoratedContainer(
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: AppStrings.appName,
-          theme: themeData(context),
-          routes: AppRouter.routes,
-        ),
+    return GradientDecoratedContainer(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: AppStrings.appName,
+        theme: themeData(context),
+        routes: AppRouter.routes,
       ),
     );
   }
